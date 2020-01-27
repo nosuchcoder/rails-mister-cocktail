@@ -1,1 +1,17 @@
-<h1> Hi </h1>
+<h1> Cocktail List </h1>
+
+<div class="container">
+   <% @cocktails.each do |cocktail| %>
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-1RTXMJ6kGr8%2FUSNjrEG22ZI%2FAAAAAAAAAJU%2FTx3nWF-ir5s%2Fs1600%2Fmargarita.jpg&f=1&nofb=1/100px180/" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= cocktail.name %></h5>
+    <p class="card-text"> Water</p>
+    <%= link_to 'Make this', cocktail_path(cocktail) %>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+   <% end %>
+</div>
+</div>
+
+<%= link_to 'New Cocktail', new_cocktail_path(@cocktail) %>
