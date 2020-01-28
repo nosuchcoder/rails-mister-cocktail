@@ -21,7 +21,7 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.find(params[:id])
   end
 
-  def delete
+  def destroy
     @cocktail = Cocktail.find(params[:id])
     @cocktail.destroy
   end
